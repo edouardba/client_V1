@@ -1,0 +1,113 @@
+/********************* GENERAL ******************************/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/****************** CONTENT BACKGROUND-COLOR ***************/
+
+.content {
+    background-color: #F4F5FC;
+}
+
+/******************* MAIN CONTENT ************************/
+
+.main-content {
+    margin: 20px;
+}
+
+/********************* SIDENAV ******************************/
+
+#sidenav {
+    width: 240px;
+    background-color: white;
+}
+
+#menus {
+    padding-top: 0;
+    margin-top: 15px;
+}
+
+#sidenav.menu-close {
+    width: 69px;
+}
+
+#sidenav.menu-open {
+    width: 240px;
+}
+
+:host /deep/ .mat-list-item-content {
+    padding: 0!important;
+}
+
+#sidenav .menu-item {
+    width: 100%;
+    border-radius: 0;
+    text-align: left;
+    padding: 7px;
+    padding-left: 22px;
+    background-color: white;
+    color: #838d91;
+    height: 100%;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.menu-item mat-icon {
+    color: #838d91;
+}
+
+#sidenav .menu-item:hover {
+    color: black;
+    background-color: #f4f5fc;
+}
+
+#sidenav .menu-item:hover mat-icon{
+    color: black;
+}
+
+#sidenav .menu-item mat-icon {
+    margin-top: -4px;
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+#toolbarMenu {
+    cursor: pointer;
+    margin: 6px;
+    margin-left: 21px;
+    margin-top: 16px;
+    color: black;
+}
+
+.mat-drawer-side {
+    border: none;
+}
+
+/******************* NAV BAR *******************/
+
+.mat-toolbar.mat-primary {
+    padding: 0;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+    height: 54px;
+}
+
+#mainToolbar .toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+#mainToolbar {
+    background-color: white;
+    position: relative;
+    box-shadow: 0 0 1px 0 #b3b3b3;
+}
+
+.toolbarMenu-container {
+    background-color: white;
+    height: 54px;
+}
+
