@@ -1,5 +1,11 @@
 <div *ngFor="let list of rankingList">
-    <p>{{list.name}}</p>
-    <p>{{list.position}}</p>
-    <p>{{list.score}}</p>
+    <ul class="list-item">
+        <div>
+            <li class="name">{{list.name}}</li>
+            <li class="position">{{list.position}}</li>
+        </div>
+        <div class="score">
+            <li>{{list.score}}</li>
+        </div>
+    </ul>
 </div>

@@ -16,7 +16,9 @@ export class DashboardRankingComponent implements OnInit {
 
   ngOnInit() {
     this.showRankingTop = true;
+    this.rankingSelectorService.changeRankingList(this.fakeTopRankingData)
   }
+  
 
   public fakeTopRankingData = [
     {id: 1, name: 'Christopher', position: 'Back-end Developer', score:'92'},

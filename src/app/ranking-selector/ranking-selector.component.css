@@ -1,0 +1,23 @@
+.list-item {
+    list-style: none;
+    display: flex;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.position {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.score {
+    position: absolute;
+    right: 10px;
+    font-size: 16px;
+    color: #333DF4;
+    background-color: #CDCFFF;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
