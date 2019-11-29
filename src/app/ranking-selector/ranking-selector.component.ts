@@ -16,7 +16,6 @@ export class RankingSelectorComponent implements OnInit {
     this.rankingSelectorService.currentRankingList.subscribe(res => {
       if(res) {
         this.rankingList = res;
-        console.log('this.rankingList', this.rankingList)
       }
     })
   }

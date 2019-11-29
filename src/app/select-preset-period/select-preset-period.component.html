@@ -1,0 +1,13 @@
+<div class="mat-calendar-footer">
+    <mat-form-field [style.width.px]="150">
+        <mat-select [(ngModel)]="periodSelected" (ngModelChange)="onPeriodSelect($event)" placeholder="Période">
+            <mat-option *ngFor="let period of periodList | keyvalue" [value]="period.key">
+                {{period.value}}
+            </mat-option>
+            <mat-option value="custom">
+                Personnalisée
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+

@@ -27,9 +27,9 @@ export class DashboardRankingComponent implements OnInit {
   ]
 
   public fakeFlopRankingData = [
-    {id: 1, name: 'Maxime', position: 'Front-end Developer', score:'92'},
-    {id: 2, name: 'Audrey', position: 'Back-end Developer', score:'84'},
-    {id: 3, name: 'Féréol', position: 'Front-end Developer', score:'84'},
+    {id: 1, name: 'Maxime', position: 'Front-end Developer', score:'72'},
+    {id: 2, name: 'Audrey', position: 'Back-end Developer', score:'61'},
+    {id: 3, name: 'Féréol', position: 'Front-end Developer', score:'55'},
   ]
 
   toggleTopRanking() {

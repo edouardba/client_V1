@@ -12,4 +12,8 @@ export class DashboardManagerComponent implements OnInit {
   ngOnInit() {
   }
 
+  getDateSelected(date) {
+  // console.log(date);
+  }
+
 }

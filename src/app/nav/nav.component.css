@@ -22,7 +22,7 @@ body {
 
 #sidenav {
     width: 240px;
-    background-color: white;
+    background-color: #292a2c;
 }
 
 #menus {
@@ -48,7 +48,7 @@ body {
     text-align: left;
     padding: 7px;
     padding-left: 22px;
-    background-color: white;
+    background-color: #292a2c;
     color: #838d91;
     height: 100%;
     font-weight: normal;
@@ -60,12 +60,12 @@ body {
 }
 
 #sidenav .menu-item:hover {
-    color: black;
-    background-color: #f4f5fc;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #sidenav .menu-item:hover mat-icon{
-    color: black;
+    color: white;
 }
 
 #sidenav .menu-item mat-icon {
@@ -79,7 +79,7 @@ body {
     margin: 6px;
     margin-left: 21px;
     margin-top: 16px;
-    color: black;
+    color: white;
 }
 
 .mat-drawer-side {
@@ -107,7 +107,7 @@ body {
 }
 
 .toolbarMenu-container {
-    background-color: white;
+    background-color: #292a2c;
     height: 54px;
 }
 

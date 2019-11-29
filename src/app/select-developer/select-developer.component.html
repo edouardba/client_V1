@@ -1,4 +1,4 @@
-<mat-form-field>
+<mat-form-field class="container" appearance="outline">
     <mat-label>All users</mat-label>
     <mat-select [(ngModel)]="userSelected" (ngModelChange)="onUserSelect($event)">
         <mat-option *ngFor="let user of userList" [value]="user.id">

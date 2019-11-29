@@ -11,10 +11,10 @@ export class SelectDeveloperComponent implements OnInit {
 
   public userSelected;
   public userList = [
-    {id: 1, name: 'clientV1'}, 
-    {id: 2, name: 'clientV2'}, 
-    {id: 3, name: 'adloop'}, 
-    {id: 4, name: 'capistrano'}
+    {id: 1, name: 'All user'}, 
+    {id: 2, name: 'Christopher'}, 
+    {id: 3, name: 'Quentin'}, 
+    {id: 4, name: 'Edouard'}
   ]
 
   ngOnInit() {

@@ -37,4 +37,8 @@ export class PerformanceRankingComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  getDateSelected(date) {
+    console.log("date selected in performance ranking component", date)
+  }
+
 }

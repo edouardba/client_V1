@@ -2,10 +2,14 @@
     <mat-card>
         <mat-card-content>
             <ul class="list-item">
-                <li>{{data.score}}</li>
-                <li>{{data.percentage}}</li>
-                <li>{{data.score_title}}</li>
-                <li>{{data.icon}}</li>
+                <div class="scoring">
+                    <li class="value">{{data.score}}</li>
+                    <li class="percentage">{{data.percentage}}</li>
+                </div>
+                    <li>{{data.score_title}}</li>
+                <div class="icon">
+                    <li>{{data.icon}}</li>
+                </div>
             </ul>
         </mat-card-content>
     </mat-card>

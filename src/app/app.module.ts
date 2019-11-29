@@ -55,6 +55,14 @@ import { SelectProjectComponent } from './select-project/select-project.componen
 import { SelectDeveloperComponent } from './select-developer/select-developer.component';
 import { RankingSelectorComponent } from './ranking-selector/ranking-selector.component';
 import { RankingSelectorService } from './shared/services/ranking-selector.service';
+import { SelectScoreTypeComponent } from './select-score-type/select-score-type.component';
+import { SelectPresetPeriodComponent } from './select-preset-period/select-preset-period.component';
+import { SiblingPeriodService } from './shared/services/sibling-period.service';
+import { DateSelectorComponent } from './date-selector/date-selector.component';
+import { DateSelectorDialogComponent } from './date-selector-dialog/date-selector-dialog.component';
+import { SelectDatepickerComponent } from './select-datepicker/select-datepicker.component';
+import { SatDatepickerModule, SatNativeDateModule } from 'saturn-datepicker';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -71,6 +79,11 @@ import { RankingSelectorService } from './shared/services/ranking-selector.servi
     SelectProjectComponent,
     SelectDeveloperComponent,
     RankingSelectorComponent,
+    SelectScoreTypeComponent,
+    SelectPresetPeriodComponent,
+    DateSelectorComponent,
+    DateSelectorDialogComponent,
+    SelectDatepickerComponent,
   ],
   imports: [
     BrowserModule,
@@ -114,10 +127,15 @@ import { RankingSelectorService } from './shared/services/ranking-selector.servi
     MatTooltipModule,
     MatTreeModule,
     ChartsModule,
+    SatDatepickerModule, 
+    SatNativeDateModule,
   ],
   providers: [
     RankingSelectorService,
+    SiblingPeriodService,
+    DatePipe
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DateSelectorDialogComponent]
 })
 export class AppModule { }
