@@ -3,9 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { NavComponent } from './nav/nav.component';
 import { DashboardManagerComponent } from './dashboard-manager/dashboard-manager.component';
 import { PerformanceRankingComponent } from './performance-ranking/performance-ranking.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
+  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   {
     path: '',
     component: NavComponent,
