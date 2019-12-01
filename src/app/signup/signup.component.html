@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="illustration-container">
+        <div class="background-img">
+            <div class="helper">
+                <div class="helper-content">
+                    <div>
+                        <h3>Private Beta plan 100% free</h3>
+                        <p>You start with our 100% free Private Beta plan, packed with everything you need to get started!
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Your data is safe with us</h3>
+                        <p>Our system executes code analysis of source code files, it is performed on ephemeral instances and source code content is immediately purged after processing. We only persist file names and metrics to our database.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-container">
+        <mat-toolbar>
+            <div class="sign-in-container">
+                <p class="signin-route">Already have an account? <a routerLink="/login"> Sign in</a></p>
+            </div>
+        </mat-toolbar>
+        <div class="form-container">
+            <h3 class="title">Create your account</h3>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <mat-form-field class="firstname" appearance="outline">
+                    <input matInput type="firstname" placeholder="Your first firstname" formControlName="firstname"
+                        class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" />
+                    <div *ngIf="submitted && f.firstname.errors" class="invalid-feedback">
+                        <div *ngIf="f.firstname.errors.required">Email is required</div>
+                    </div>
+                </mat-form-field>
+                <mat-form-field class="name" appearance="outline">
+                    <input matInput type="name" placeholder="Your last name" formControlName="name" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required">Email is required</div>
+                    </div>
+                </mat-form-field>
+                <mat-form-field class="email" appearance="outline">
+                    <input matInput type="email" placeholder="Your email adress" formControlName="email"
+                        class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                    </div>
+                </mat-form-field><br />
+                <mat-form-field class="password" appearance="outline">
+                    <input matInput type="password" placeholder="Choose your password" formControlName="password"
+                        class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                    </div>
+                </mat-form-field><br />
+                <div>
+                    <button [disabled]="loading" class="login-button" mat-raised-button><span>Login</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

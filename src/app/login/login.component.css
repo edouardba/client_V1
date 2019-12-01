@@ -6,18 +6,25 @@
 }
 
 .illustration-container {
-    width: 55%;
+    width: 50%;
     background-color: #f8fafe;
 }
 
+.content-container {
+    width: 50%;
+}
+
 .img {
-    margin-top: 5%;
+    padding: 20% 20% 20% 19%;
+    width: 60%;
+    height: 60%;
 }
 
 .form-container {
-    width: 45%;
+    background-color: white;
+    width: 100%;
     text-align: center;
-    margin-top: 15%;
+    padding-top: 15%;
 }
 
 .mat-form-field.mat-form-field {
@@ -25,7 +32,54 @@
 }
 
 .login-button {
+    margin-top: 25px;
     width: 50%;
     cursor: pointer;
     font-size: 15px;
+    background-color: #5b4ff6;
+    color: white;
+}
+
+.password-container {
+    text-align: -webkit-right;
+    margin-right: 25%;
+}
+
+.password-forget {
+    font-style: italic;
+    font-size: 14px;
+    text-decoration: none;
+    color: #1C254C;
+}
+
+/********** NAVBAR ***********/
+
+.mat-toolbar.mat-primary {
+    position: relative;
+    padding: 0;
+}
+
+.mat-toolbar {
+    background: #f2f5fb;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+    width: 100%;
+    height: 54px;
+}
+
+#mainToolbar .toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+.sign-up-container {
+    position: absolute;
+    right: 5%;
+}
+
+.signup-route {
+    font-size: 14px;
+    margin: 0;
+    color:  #415574;
+    font-weight: normal;
 }

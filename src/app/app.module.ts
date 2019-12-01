@@ -64,6 +64,7 @@ import { SelectDatepickerComponent } from './select-datepicker/select-datepicker
 import { SatDatepickerModule, SatNativeDateModule } from 'saturn-datepicker';
 import { DatePipe } from '@angular/common';
 import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +87,7 @@ import { LoginComponent } from './login/login.component';
     DateSelectorDialogComponent,
     SelectDatepickerComponent,
     LoginComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
