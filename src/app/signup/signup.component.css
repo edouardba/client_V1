@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+* {
+    font-family: proximanova-regular,"Helvetica Neue",Helvetica,sans-serif;
+}
+
 .container {
     height: 100%;
     width: 100%;
@@ -12,6 +16,7 @@
 .illustration-container {
     width: 50%;
     background-color: #f8fafe;
+    padding: 7% 5% 10% 5%;
 }
 
 .content-container {
@@ -19,13 +24,11 @@
 }
 
 .title {
+    font-size: 24px;
+    font-weight: 500;
     text-align: left;
     margin-bottom: 40px;
 }
-
-/* .background-img {
-
-} */
 
 .helper {
     overflow: hidden;
@@ -37,7 +40,7 @@
     flex-direction: column;
     width: 66.66%;
     margin: auto;
-    margin-top: 15%;
+    margin-top: 5%;
 }
 
 .helper-content {
@@ -50,42 +53,53 @@
 }
 
 .helper-content h3 {
-    font-weight: normal;
+    line-height: 32px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .helper-content p {
     color: #415574;
-    font-weight: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 8px;
 }
 
 .form-container {
     background-color: white;
     width: 100%;
     text-align: center;
-    padding: 10% 5% 10% 5%;
+    padding: 2% 15% 10% 15%;
 }
 
 .firstname {
-    margin-right: 5%;
-    width: 45%;
+    margin-right: 1%;
+    width: 49%;
 }
 
 .name {
-    margin-left: 5%;
-    width: 45%;
+    margin-left: 1%;
+    width: 49%;
 }
 
-.email, .password {
+.email, .organization, .engineer-number, .role, .hosting {
     width: 100%;
 }
 
-.login-button {
-    margin-top: 20px;
+.signup-button {
+    margin-top: 35px;
     width: 100%;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 18px;
     background-color: #5b4ff6;
     color: white;
+}
+
+.legal {
+    color: #415574;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
 }
 
 .container ::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important;}
@@ -117,8 +131,8 @@
 }
 
 .signin-route {
-    font-size: 14px;
+    font-size: 16px;
     margin: 0;
     color:  #415574;
-    font-weight: normal;
+    font-weight: 400;
 }

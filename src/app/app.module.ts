@@ -65,6 +65,10 @@ import { SatDatepickerModule, SatNativeDateModule } from 'saturn-datepicker';
 import { DatePipe } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { AngularTokenModule } from 'angular-token';
+import { environment } from 'src/environments/environment';
+import { SelectRepositoriesService } from './shared/services/select-repositories.service';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -88,6 +92,7 @@ import { SignupComponent } from './signup/signup.component';
     SelectDatepickerComponent,
     LoginComponent,
     SignupComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -133,11 +138,16 @@ import { SignupComponent } from './signup/signup.component';
     ChartsModule,
     SatDatepickerModule, 
     SatNativeDateModule,
+    AngularTokenModule.forRoot({
+      apiBase: environment.baseUrl
+    })
   ],
   providers: [
     RankingSelectorService,
     SiblingPeriodService,
-    DatePipe
+    DatePipe,
+    AngularTokenModule,
+    SelectRepositoriesService
   ],
   bootstrap: [AppComponent],
   entryComponents: [DateSelectorDialogComponent]

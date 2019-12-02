@@ -34,6 +34,9 @@
             <div>
                 <app-select-repository></app-select-repository>
             </div>
+            <button class="logout" (click)="onSubmit()" routerLink="/login">
+                Logout
+            </button>
         </mat-toolbar>
         <div class="main-content">
             <router-outlet></router-outlet>
