@@ -69,6 +69,7 @@ import { AngularTokenModule } from 'angular-token';
 import { environment } from 'src/environments/environment';
 import { SelectRepositoriesService } from './shared/services/select-repositories.service';
 import { AdminComponent } from './admin/admin.component';
+import { SignupService } from './shared/services/signup.service';
 
 @NgModule({
   declarations: [
@@ -147,7 +148,8 @@ import { AdminComponent } from './admin/admin.component';
     SiblingPeriodService,
     DatePipe,
     AngularTokenModule,
-    SelectRepositoriesService
+    SelectRepositoriesService,
+    SignupService
   ],
   bootstrap: [AppComponent],
   entryComponents: [DateSelectorDialogComponent]

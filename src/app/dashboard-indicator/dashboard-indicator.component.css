@@ -6,6 +6,7 @@
 .list-item {
     list-style: none;
     padding-left: 0;
+    color: white;
 }
 
 .mat-card:not([class*=mat-elevation-z]) {
@@ -39,3 +40,18 @@ mat-card {
     top: 40px;
 }
 
+.bckClassQuality {
+    background-color: #003fe1;
+}
+
+.bckClassPersistence {
+    background-color: #4269f6;
+}
+
+.bckClassGlobal {
+    background-color: #7375f7;
+}
+
+.bckClassEvolution {
+    background-color: #ab83f8;
+}

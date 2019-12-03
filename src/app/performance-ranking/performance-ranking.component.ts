@@ -18,19 +18,19 @@ export class PerformanceRankingComponent implements OnInit {
   }
 
   public data = [
-    {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-    {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-    {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-    {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-    {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-    {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-    {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-    {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-    {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-    {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+    {rank: 1, name: 'Christopher', position: 'Back-end Developer', score: 84, evolution: ''},
+    {rank: 2, name: 'Quentin', position: 'Back-end Developer', score: 82, evolution:''},
+    {rank: 3, name: 'Jonathan', position: 'Back-end Developer', score: 82, evolution: ''},
+    {rank: 4, name: 'Timothé', position: 'Front-end Developer', score: 77, evolution: ''},
+    {rank: 5, name: 'Nicolas', position: 'Back-end Developer', score: 72, evolution: ''},
+    {rank: 6, name: 'Edouard', position: 'Front-end Developer', score: 69, evolution: ''},
+    {rank: 7, name: 'Maxime', position: 'Front-end Developer', score: 66, evolution: ''},
+    {rank: 8, name: 'Féréol', position: 'Front-end Developer', score: 65, evolution: ''},
+    {rank: 9, name: 'Audrey', position: 'Back-end Developer', score: 64, evolution: ''},
+    {rank: 10, name: 'Stéphane', position: 'Back-end Developer', score: 51, evolution: ''},
   ];
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['rank', 'name', 'position', 'score', 'evolution'];
   dataSource = new MatTableDataSource(this.data);
 
   applyFilter(filterValue: string) {

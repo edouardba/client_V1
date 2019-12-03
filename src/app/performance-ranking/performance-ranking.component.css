@@ -30,3 +30,22 @@ table {
     0 1px 1px 0 #d4d1fb, 
     0 1px 3px 0 #d4d1fb;
 }
+
+.mat-row:hover {
+    background-color: #F8F8F8;
+    cursor: pointer;
+    /* box-shadow: -5px 0 5px -5px rgb(106, 89, 255); */
+}
+
+.bck-score {
+    background-color: #CDCFFF;
+    padding: 3px 5px 3px 5px;
+    border-radius: 3px;
+    color: #333DF4;
+}
+
+.chroma-dot {
+    background-color: #565CC4;
+    padding: 3px 5px 3px 5px;
+    border-radius: 4px;
+}

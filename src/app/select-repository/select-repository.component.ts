@@ -12,13 +12,6 @@ export class SelectRepositoryComponent implements OnInit {
 
   public repositorySelected;
   public repositoryList;
-  // = 
-  // [
-  //   {id: 1, name: 'clientV1'}, 
-  //   {id: 2, name: 'clientV2'}, 
-  //   {id: 3, name: 'adloop'}, 
-  //   {id: 4, name: 'capistrano'}
-  // ]
 
   ngOnInit() {
     this.selectRepositoriesService.getRepositories().subscribe(res => {

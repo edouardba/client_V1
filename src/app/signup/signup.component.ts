@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { SignupService } from '../shared/services/signup.service';
 
 @Component({
   selector: 'app-signup',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private router: Router) { }
+  constructor(private formBuilder: FormBuilder, private router: Router, private signupService: SignupService) { }
 
   signupForm: FormGroup;
   loading = false;
@@ -36,6 +37,15 @@ export class SignupComponent implements OnInit {
     {id: 4, value: 'GitLab'},
     {id: 5, value: 'Other'},
   ]
+  public registration = {
+    // firstname: null,
+    // name: null,
+    // email: null,
+    // organization: null,
+    // engineer: null,
+    // hosting: null,
+    // role: null
+  }
 
   
   ngOnInit() {
@@ -61,10 +71,10 @@ export class SignupComponent implements OnInit {
         return;
     }
     this.loading = true;
-
-    console.log('this.signupForm.value :',this.signupForm.value)
-    // CALL SERVICE TO SEND THE DATA SELECTED TO THE BACKEND
+    this.registration = this.signupForm.value;
     
+    // CALL SERVICE TO SEND THE DATA SELECTED TO THE BACKEND
+    //this.signupService.sendRegistrationForm(this.registration);
   }
 
 }

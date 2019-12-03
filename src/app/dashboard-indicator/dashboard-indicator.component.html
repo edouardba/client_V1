@@ -1,5 +1,8 @@
 <div class="container">
-    <mat-card>
+    <mat-card [ngClass]="{bckClassQuality: ['Quality score'].includes(data.score_title), 
+                          bckClassPersistence: ['Persistence score'].includes(data.score_title),
+                          bckClassGlobal: ['Global score'].includes(data.score_title),
+                          bckClassEvolution: ['Evolution score'].includes(data.score_title)}">
         <mat-card-content>
             <ul class="list-item">
                 <div class="scoring">
