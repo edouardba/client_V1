@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NavComponent } from './nav/nav.component';
 import { DashboardManagerComponent } from './dashboard-manager/dashboard-manager.component';
-import { PerformanceRankingComponent } from './performance-ranking/performance-ranking.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { PersistenceComponent } from './persistence/persistence.component';
 
 
 const routes: Routes = [
@@ -16,7 +16,7 @@ const routes: Routes = [
     component: NavComponent,
     children: [
       { path: 'dashboard-manager', component: DashboardManagerComponent }, 
-      { path: 'performance-ranking', component: PerformanceRankingComponent },
+      { path: 'persistence-analyse', component: PersistenceComponent },
     ]
   }
 ];

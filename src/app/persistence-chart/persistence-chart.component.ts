@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Label, Color } from 'ng2-charts';
-import * as Chart from 'chart.js';
 
 @Component({
-  selector: 'app-dashboard-chart',
-  templateUrl: './dashboard-chart.component.html',
-  styleUrls: ['./dashboard-chart.component.css']
+  selector: 'app-persistence-chart',
+  templateUrl: './persistence-chart.component.html',
+  styleUrls: ['./persistence-chart.component.css']
 })
-export class DashboardChartComponent implements OnInit {
+export class PersistenceChartComponent implements OnInit {
 
   public lineChartOptions = {
     responsive: true,

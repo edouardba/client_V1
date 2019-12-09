@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="chart-table-container">
+        <div class="chart">
+            <app-persistence-chart></app-persistence-chart>
+        </div>
+        <div class="table">
+            <app-persistence-table [dataSource]="dataSource" [displayedColumns]="displayedColumns"></app-persistence-table>
+        </div>
+    </div>
+    <div class="ranking">
+        <app-persistence-ranking [ranking]="dataRanking"></app-persistence-ranking>
+    </div>
+</div>

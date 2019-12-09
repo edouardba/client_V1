@@ -37,19 +37,19 @@ export class LoginComponent implements OnInit {
     }
     this.loading = true;
 
-    this.tokenService.signIn({
-      login: this.f.email.value,
-      password: this.f.password.value
-    }).subscribe(
-    (data) => {
-      console.log(data)
+    // this.tokenService.signIn({
+    //   login: this.f.email.value,
+    //   password: this.f.password.value
+    // }).subscribe(
+    // (data) => {
+    //   console.log(data)
       this.router.navigate( ['dashboard-manager']);
-    },
-    (error) => {
-      console.log('Error Password !' + error);
-      console.log(this.tokenService.signIn)
-    }
-    )
+    // },
+    // (error) => {
+    //   console.log('Error Password !' + error);
+    //   console.log(this.tokenService.signIn)
+    // }
+    // )
   }
 
 }

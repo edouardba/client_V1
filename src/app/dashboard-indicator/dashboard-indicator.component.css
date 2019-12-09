@@ -1,12 +1,14 @@
 .container mat-card {
     margin-right: 10px;
     margin-bottom: 10px;
+    /* background-color: white; */
 }
 
 .list-item {
     list-style: none;
     padding-left: 0;
     color: white;
+    /* color: black; */
 }
 
 .mat-card:not([class*=mat-elevation-z]) {
@@ -25,7 +27,7 @@ mat-card {
 
 .value {
     font-size: 28px;
-    font-weight: medium;
+    font-weight: 500;
 }
 
 .percentage {
@@ -38,6 +40,11 @@ mat-card {
     position: absolute;
     right: 15px;
     top: 40px;
+}
+
+.img {
+    width: 30%;
+    margin-left: 70%;
 }
 
 .bckClassQuality {
@@ -54,4 +61,10 @@ mat-card {
 
 .bckClassEvolution {
     background-color: #ab83f8;
+}
+
+.ultest {
+    list-style: none;
+    display: flex;
+    padding-left: 33px;
 }

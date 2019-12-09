@@ -1,0 +1,26 @@
+<div class="container">
+    <h3 class="title">Ranking</h3>
+    <ul *ngFor="let rank of ranking">
+        <div class="li-container">
+            <div class="rank">
+                <li><span class="bck-rank">{{rank.rank}}</span></li>
+            </div>
+            <div>
+                <li>avatar</li>
+            </div>
+            <div class="name-position">
+                <li class="name">{{rank.name}}</li>
+                <li class="position">{{rank.position}}</li>
+            </div>
+            <div>
+                <li><i class="material-icons variation">arrow_drop_up</i></li>
+            </div>
+            <div>
+                <li class="like"><i class="material-icons">favorite_border</i></li>
+            </div>
+            <div>
+                <li class="dislike"><i class="material-icons">thumb_down_alt</i></li>
+            </div>
+        </div>
+    </ul>
+</div>

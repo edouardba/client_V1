@@ -1,0 +1,23 @@
+/************* TABLE ***************/
+
+table {
+    width: 100%;
+}
+
+.table-container {
+    box-shadow: 0 2px 1px -1px #d4d1fb, 
+    0 1px 1px 0 #d4d1fb, 
+    0 1px 3px 0 #d4d1fb;
+}
+
+.mat-row:hover {
+    background-color: #F8F8F8;
+    cursor: pointer;
+}
+
+.bck-score {
+    background-color: #CDCFFF;
+    padding: 3px 5px 3px 5px;
+    border-radius: 3px;
+    color: #333DF4;
+}

@@ -1,8 +1,0 @@
-<mat-form-field class="container" appearance="outline">
-    <mat-label>Select score</mat-label>
-    <mat-select [(ngModel)]="scoreSelected" (ngModelChange)="onScoreSelect($event)">
-        <mat-option *ngFor="let score of scoreList" [value]="score.id">
-            {{score.type}}
-        </mat-option>
-    </mat-select>
-</mat-form-field>

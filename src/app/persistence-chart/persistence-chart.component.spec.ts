@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PerformanceRankingComponent } from './performance-ranking.component';
+import { PersistenceChartComponent } from './persistence-chart.component';
 
-describe('PerformanceRankingComponent', () => {
-  let component: PerformanceRankingComponent;
-  let fixture: ComponentFixture<PerformanceRankingComponent>;
+describe('PersistenceChartComponent', () => {
+  let component: PersistenceChartComponent;
+  let fixture: ComponentFixture<PersistenceChartComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PerformanceRankingComponent ]
+      declarations: [ PersistenceChartComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PerformanceRankingComponent);
+    fixture = TestBed.createComponent(PersistenceChartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

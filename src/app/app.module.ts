@@ -50,12 +50,10 @@ import { DashboardChartComponent } from './dashboard-chart/dashboard-chart.compo
 import { DashboardIndicatorComponent } from './dashboard-indicator/dashboard-indicator.component';
 import { DashboardRankingsComponent } from './dashboard-rankings/dashboard-rankings.component';
 import { DashboardRankingComponent } from './dashboard-ranking/dashboard-ranking.component';
-import { PerformanceRankingComponent } from './performance-ranking/performance-ranking.component';
 import { SelectProjectComponent } from './select-project/select-project.component';
 import { SelectDeveloperComponent } from './select-developer/select-developer.component';
 import { RankingSelectorComponent } from './ranking-selector/ranking-selector.component';
 import { RankingSelectorService } from './shared/services/ranking-selector.service';
-import { SelectScoreTypeComponent } from './select-score-type/select-score-type.component';
 import { SelectPresetPeriodComponent } from './select-preset-period/select-preset-period.component';
 import { SiblingPeriodService } from './shared/services/sibling-period.service';
 import { DateSelectorComponent } from './date-selector/date-selector.component';
@@ -70,6 +68,10 @@ import { environment } from 'src/environments/environment';
 import { SelectRepositoriesService } from './shared/services/select-repositories.service';
 import { AdminComponent } from './admin/admin.component';
 import { SignupService } from './shared/services/signup.service';
+import { PersistenceComponent } from './persistence/persistence.component';
+import { PersistenceRankingComponent } from './persistence-ranking/persistence-ranking.component';
+import { PersistenceTableComponent } from './persistence-table/persistence-table.component';
+import { PersistenceChartComponent } from './persistence-chart/persistence-chart.component';
 
 @NgModule({
   declarations: [
@@ -82,11 +84,9 @@ import { SignupService } from './shared/services/signup.service';
     DashboardIndicatorComponent,
     DashboardRankingsComponent,
     DashboardRankingComponent,
-    PerformanceRankingComponent,
     SelectProjectComponent,
     SelectDeveloperComponent,
     RankingSelectorComponent,
-    SelectScoreTypeComponent,
     SelectPresetPeriodComponent,
     DateSelectorComponent,
     DateSelectorDialogComponent,
@@ -94,6 +94,10 @@ import { SignupService } from './shared/services/signup.service';
     LoginComponent,
     SignupComponent,
     AdminComponent,
+    PersistenceComponent,
+    PersistenceRankingComponent,
+    PersistenceTableComponent,
+    PersistenceChartComponent,
   ],
   imports: [
     BrowserModule,

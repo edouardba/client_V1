@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SelectScoreTypeComponent } from './select-score-type.component';
+import { PersistenceRankingComponent } from './persistence-ranking.component';
 
-describe('SelectScoreTypeComponent', () => {
-  let component: SelectScoreTypeComponent;
-  let fixture: ComponentFixture<SelectScoreTypeComponent>;
+describe('PersistenceRankingComponent', () => {
+  let component: PersistenceRankingComponent;
+  let fixture: ComponentFixture<PersistenceRankingComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SelectScoreTypeComponent ]
+      declarations: [ PersistenceRankingComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SelectScoreTypeComponent);
+    fixture = TestBed.createComponent(PersistenceRankingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
