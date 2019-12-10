@@ -10,12 +10,12 @@ export class RankingSelectorComponent implements OnInit {
 
   constructor(private rankingSelectorService: RankingSelectorService) { }
 
-  public rankingList;
+  public list;
 
   ngOnInit() {
     this.rankingSelectorService.currentRankingList.subscribe(res => {
       if(res) {
-        this.rankingList = res;
+        this.list = res;
       }
     })
   }

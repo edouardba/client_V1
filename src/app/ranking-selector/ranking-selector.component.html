@@ -1,11 +1,11 @@
-<div *ngFor="let list of rankingList">
+<div *ngFor="let item of list">
     <ul class="list-item">
         <div>
-            <li class="name">{{list.name}}</li>
-            <li class="position">{{list.position}}</li>
+            <li class="name">{{item.name}}</li>
+            <li class="position">{{item.position}}</li>
         </div>
         <div class="score">
-            <li>{{list.score}}</li>
+            <li>{{item.score}}</li>
         </div>
     </ul>
 </div>

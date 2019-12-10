@@ -1,16 +1,16 @@
 <div class="container">
     <h3 class="title">Ranking</h3>
-    <ul *ngFor="let rank of ranking">
+    <ul *ngFor="let rank of ranking | paginate: { itemsPerPage: 10, currentPage: page }" (click)="onSelect(rank)">
         <div class="li-container">
             <div class="rank">
                 <li><span class="bck-rank">{{rank.rank}}</span></li>
             </div>
             <div>
-                <li>avatar</li>
+                <li>{{rank.user.avatar}}</li>
             </div>
             <div class="name-position">
-                <li class="name">{{rank.name}}</li>
-                <li class="position">{{rank.position}}</li>
+                <li class="name">{{rank.user.name}}</li>
+                <li class="position">{{rank.user.position}}</li>
             </div>
             <div>
                 <li><i class="material-icons variation">arrow_drop_up</i></li>
@@ -23,4 +23,7 @@
             </div>
         </div>
     </ul>
+    <div class="pagination-container">
+        <pagination-controls class="pagination" (pageChange)="page = $event"></pagination-controls>
+    </div>
 </div>

@@ -1,0 +1,31 @@
+{
+    "ranking": [
+        {
+            "user": 
+                {    
+                    "avatar": "avatar",
+                    "name": "Christopher",
+                    "position": "Back-end developer"
+                },
+            "rank": 1,
+            "rank_variation": 2
+        }
+    ],
+    "details": [
+        {
+            "commit_name": "Resolve conflict",
+            "characters_number": 34687,
+            "score": 82,
+            "variation": -0.7
+        }
+    ],
+    "datasets": [
+        {
+            "dataset": 
+                {
+                    "label": "ROI", 
+                    "data": [1.9, 3, 4.4, 2.2, 3.9, 3.9, 3.5, 3.8, 4.1, 2.8, 3.2, 3.9]
+                }
+        }
+    ]
+}

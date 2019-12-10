@@ -3,6 +3,7 @@
     box-shadow: 0 2px 1px -1px #d4d1fb, 
     0 1px 1px 0 #d4d1fb, 
     0 1px 3px 0 #d4d1fb;
+    padding-bottom: 5px;
 }
 
 .title {
@@ -67,4 +68,12 @@ li {
 
 .dislike:hover {
     color: blue;
+}
+
+.pagination {
+    font-size: smaller;
+}
+
+.pagination-container {
+    margin-left: 33%;
 }

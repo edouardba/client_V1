@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
+import { PersistenceService } from '../shared/services/persistence.service';
 
 @Component({
   selector: 'app-persistence',
@@ -8,16 +9,18 @@ import { MatTableDataSource } from '@angular/material';
 })
 export class PersistenceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private persistenceService: PersistenceService) { }
+  
+  public dataRanking;
 
-  public dataRanking = [
-    {rank: 1, name: 'Christopher', position: 'Back-end Developer'},
-    {rank: 2, name: 'Quentin', position: 'Back-end Developer'},
-    {rank: 3, name: 'Timothé', position: 'Back-end Developer'},
-    {rank: 4, name: 'Nicolas', position: 'Back-end Developer'},
-    {rank: 5, name: 'Jonathan', position: 'Back-end Developer'},
-    {rank: 6, name: 'Edouard', position: 'Front-end Developer'},
-  ]
+  // public dataRanking = [
+  //   {rank: 1, name: 'Christopher', position: 'Back-end Developer'},
+  //   {rank: 2, name: 'Quentin', position: 'Back-end Developer'},
+  //   {rank: 3, name: 'Timothé', position: 'Back-end Developer'},
+  //   {rank: 4, name: 'Nicolas', position: 'Back-end Developer'},
+  //   {rank: 5, name: 'Jonathan', position: 'Back-end Developer'},
+  //   {rank: 6, name: 'Edouard', position: 'Front-end Developer'},
+  // ]
 
 
   public dataTable = [
@@ -36,7 +39,12 @@ export class PersistenceComponent implements OnInit {
   displayedColumns: string[] = ['name', 'characters_number', 'persistence_score'];
   dataSource = new MatTableDataSource(this.dataTable);
 
+
   ngOnInit() {
+    this.persistenceService.getData().subscribe(res => {
+      console.log('res', res.ranking)
+      this.dataRanking = res.ranking
+    })
 
   }
 

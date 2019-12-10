@@ -72,6 +72,8 @@ import { PersistenceComponent } from './persistence/persistence.component';
 import { PersistenceRankingComponent } from './persistence-ranking/persistence-ranking.component';
 import { PersistenceTableComponent } from './persistence-table/persistence-table.component';
 import { PersistenceChartComponent } from './persistence-chart/persistence-chart.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { PersistenceService } from './shared/services/persistence.service';
 
 @NgModule({
   declarations: [
@@ -143,6 +145,7 @@ import { PersistenceChartComponent } from './persistence-chart/persistence-chart
     ChartsModule,
     SatDatepickerModule, 
     SatNativeDateModule,
+    NgxPaginationModule,
     AngularTokenModule.forRoot({
       apiBase: environment.baseUrl
     })
@@ -153,7 +156,8 @@ import { PersistenceChartComponent } from './persistence-chart/persistence-chart
     DatePipe,
     AngularTokenModule,
     SelectRepositoriesService,
-    SignupService
+    SignupService,
+    PersistenceService
   ],
   bootstrap: [AppComponent],
   entryComponents: [DateSelectorDialogComponent]
