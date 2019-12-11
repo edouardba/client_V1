@@ -4,6 +4,16 @@
     display: flex;
 }
 
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title {
+    margin-left: 8px;
+}
+
 .chart-table-container {
     /* height: 100%; */
     padding: 0 0 10px 10px;

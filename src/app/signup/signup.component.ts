@@ -70,9 +70,11 @@ export class SignupComponent implements OnInit {
     if (this.signupForm.invalid) {
         return;
     }
+
     this.loading = true;
     this.registration = this.signupForm.value;
-    
+    this.router.navigate(['thank-you'])
+
     // CALL SERVICE TO SEND THE DATA SELECTED TO THE BACKEND
     //this.signupService.sendRegistrationForm(this.registration);
   }

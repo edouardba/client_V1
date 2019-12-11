@@ -74,6 +74,7 @@ import { PersistenceTableComponent } from './persistence-table/persistence-table
 import { PersistenceChartComponent } from './persistence-chart/persistence-chart.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { PersistenceService } from './shared/services/persistence.service';
+import { ThankYouPageComponent } from './thank-you-page/thank-you-page.component';
 
 @NgModule({
   declarations: [
@@ -100,6 +101,7 @@ import { PersistenceService } from './shared/services/persistence.service';
     PersistenceRankingComponent,
     PersistenceTableComponent,
     PersistenceChartComponent,
+    ThankYouPageComponent,
   ],
   imports: [
     BrowserModule,

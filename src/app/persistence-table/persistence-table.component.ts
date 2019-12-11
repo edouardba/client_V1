@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort } from '@angular/material';
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-persistence-table',
@@ -10,7 +11,13 @@ export class PersistenceTableComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   
-  constructor() { }
+  constructor(breakpointObserver: BreakpointObserver) { 
+    breakpointObserver.observe(['(max-width: 900px)']).subscribe(result => {
+      this.displayedColumns = result.matches ? 
+          ['commit_name', 'characters_number'] : 
+          ['commit_name', 'characters_number', 'score'];
+    });
+  }
 
   @Input() displayedColumns: string[];
   @Input() dataSource;

@@ -1,9 +1,9 @@
 <div class="table-container">
-    <table mat-table [dataSource]="dataSource" matSort>
+    <table mat-table [dataSource]="dataSource" [class.isMobile]="isMobile" matSort>
 
-        <ng-container matColumnDef="name">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Commit Name </th>
-            <td mat-cell *matCellDef="let element">{{element.name}} </td>
+        <ng-container matColumnDef="commit_name">
+            <th mat-header-cell  *matHeaderCellDef mat-sort-header> Commit Name </th>
+            <td mat-cell *matCellDef="let element">{{element.commit_name}} </td>
         </ng-container>
 
         <ng-container matColumnDef="characters_number">
@@ -11,9 +11,9 @@
             <td mat-cell *matCellDef="let element"> {{element.characters_number}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="persistence_score">
+        <ng-container matColumnDef="score">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Persistence score </th>
-            <td mat-cell *matCellDef="let element"><span class="bck-score"> {{element.persistence_score}} </span></td>
+            <td mat-cell *matCellDef="let element"><span class="bck-score"> {{element.score}} </span></td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
+import { PersistenceService } from '../shared/services/persistence.service';
 
 @Component({
   selector: 'app-persistence-ranking',
@@ -8,17 +9,16 @@ import { PageEvent } from '@angular/material/paginator';
 })
 export class PersistenceRankingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private persistenceService: PersistenceService) { }
 
-  @Input() ranking;
+  @Input() list;
   page: number = 1;
 
   ngOnInit() {
-    console.log('rankingData get in ranking component', this.ranking)
   }
 
   onSelect(item){
-    console.log(item)
+    this.persistenceService.changeSelectedUser(item.user)
   }
 
 }

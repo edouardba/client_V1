@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { PersistenceService } from '../shared/services/persistence.service';
 
 @Component({
   selector: 'app-persistence-chart',
@@ -14,17 +15,22 @@ export class PersistenceChartComponent implements OnInit {
   public lineChartLabels = ['2001', '2002', '2003', '2004', '2005'];
   public lineChartType = 'line';
   public lineChartLegend = true;
+  public lineChartData;
 
-  public lineChartData = [
-    {data: [65, 59, 76, 98, 34], label: 'quality score'},
-    {data: [32, 12, 45, 76, 23], label: 'persistence score'},
-    {data: [6, 30, 5, 24, 9], label: 'global score'},
-    {data: [22, 46, 20, 32, 12], label: 'evolution score'}
-  ]
-
-  constructor() { }
+  constructor(private persistenceService: PersistenceService) { }
 
   ngOnInit() {
+    this.persistenceService.currentchartUserData.subscribe(res => {
+      if(res) {
+        this.lineChartData = []
+        for(let i = 0; i < res.length; i++) {
+          this.lineChartData.push(res[i])
+        }
+        console.log(this.lineChartData)
+      }
+
+    })
   }
+
 
 }

@@ -28,6 +28,7 @@ export class DateSelectorDialogComponent implements OnInit {
   }
 
   getPresetDate(period) {
+    console.log('preset period in date selector comp',period)
     this.period = period;
     this.range = this.data.range;
     this.showDatepicker = period === 'custom';
