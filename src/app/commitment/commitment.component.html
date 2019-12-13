@@ -1,0 +1,24 @@
+<div class="header">
+    <div>
+        <h2>Commitment</h2>
+    </div>
+    <div class="period">
+        <app-select-preset-period class="period-select" (periodPreset)="getPresetDate($event)">
+        </app-select-preset-period>
+    </div>
+</div>
+
+<div class="container">
+    <div class="chart-table-container">
+        <div class="chart">
+            <app-commitment-chart></app-commitment-chart>
+        </div>
+        <div class="table">
+            <app-commitment-table>
+            </app-commitment-table>
+        </div>
+    </div>
+    <div class="ranking">
+        <app-commitment-ranking></app-commitment-ranking>
+    </div>
+</div>

@@ -75,6 +75,11 @@ import { PersistenceChartComponent } from './persistence-chart/persistence-chart
 import {NgxPaginationModule} from 'ngx-pagination';
 import { PersistenceService } from './shared/services/persistence.service';
 import { ThankYouPageComponent } from './thank-you-page/thank-you-page.component';
+import { CommitmentComponent } from './commitment/commitment.component';
+import { RankingComponent } from './ranking/ranking.component';
+import { CommitmentTableComponent } from './commitment-table/commitment-table.component';
+import { CommitmentChartComponent } from './commitment-chart/commitment-chart.component';
+import { CommitmentRankingComponent } from './commitment-ranking/commitment-ranking.component';
 
 @NgModule({
   declarations: [
@@ -102,6 +107,11 @@ import { ThankYouPageComponent } from './thank-you-page/thank-you-page.component
     PersistenceTableComponent,
     PersistenceChartComponent,
     ThankYouPageComponent,
+    CommitmentComponent,
+    RankingComponent,
+    CommitmentTableComponent,
+    CommitmentChartComponent,
+    CommitmentRankingComponent,
   ],
   imports: [
     BrowserModule,

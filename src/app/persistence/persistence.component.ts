@@ -1,18 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 import { PersistenceService } from '../shared/services/persistence.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-persistence',
   templateUrl: './persistence.component.html',
   styleUrls: ['./persistence.component.css']
 })
-export class PersistenceComponent implements OnInit {
+export class PersistenceComponent implements OnInit, OnDestroy {
 
   constructor(private persistenceService: PersistenceService) { }
 
   public rankingList;
   public selectedUser;
+  private rankingListSubscription: Subscription;
+  private currentUserSelectedSubscription: Subscription;
+  private detailsByUserIdSubcription: Subscription;
+  private chartByUserIdSubcription: Subscription;
+
 
   public displayedColumns: string[] = ['commit_name', 'characters_number', 'score'];
   public dataSource = new MatTableDataSource();
@@ -23,13 +29,13 @@ export class PersistenceComponent implements OnInit {
   }
 
   getRankingList() {
-    this.persistenceService.getRankingList().subscribe(res => {
+    this.rankingListSubscription = this.persistenceService.getRankingList().subscribe(res => {
       this.rankingList = res.ranking
     })
   }
 
   getCurrentUserSelected() {
-    this.persistenceService.currentUserSelected.subscribe(res => {
+    this.currentUserSelectedSubscription = this.persistenceService.currentUserSelected.subscribe(res => {
       if (res) {
         console.log('this.selectedUser', this.selectedUser)
         this.selectedUser = res;
@@ -40,13 +46,13 @@ export class PersistenceComponent implements OnInit {
   }
 
   getUserDetails() {
-    this.persistenceService.getDetailsByUserId(this.selectedUser.id).subscribe(res => {
+    this.detailsByUserIdSubcription = this.persistenceService.getDetailsByUserId(this.selectedUser.id).subscribe(res => {
       this.dataSource = new MatTableDataSource(res.details);
     })
   }
 
   getChartData() {
-    this.persistenceService.getChartDataByUserId(this.selectedUser.id).subscribe(res => {
+    this.chartByUserIdSubcription = this.persistenceService.getChartDataByUserId(this.selectedUser.id).subscribe(res => {
       if(res) {
         this.persistenceService.changeChartUserData(res.datasets);
       }
@@ -55,6 +61,21 @@ export class PersistenceComponent implements OnInit {
 
   getPresetDate(periodSelected) {
     console.log('periodSelected',periodSelected)
+  }
+
+  ngOnDestroy() {
+    if(this.rankingListSubscription) {
+      this.rankingListSubscription.unsubscribe();
+    }
+    if(this.currentUserSelectedSubscription) {
+      this.currentUserSelectedSubscription.unsubscribe();
+    }
+    if(this.detailsByUserIdSubcription) {
+      this.detailsByUserIdSubcription.unsubscribe()
+    }
+    if(this.chartByUserIdSubcription) {
+      this.chartByUserIdSubcription.unsubscribe();
+    }
   }
 
 }

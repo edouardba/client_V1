@@ -17,12 +17,22 @@
 
             <mat-list id="menus">
                 <mat-list-item>
-                    <a routerLink="/persistence-analyse" class="menu-item" mat-flat-button>
+                    <a routerLink="/persistence" class="menu-item" mat-flat-button>
                         <mat-icon>compare_arrows</mat-icon>
                         Persistence
                     </a>
                 </mat-list-item>
             </mat-list>
+
+            <mat-list id="menus">
+                <mat-list-item>
+                    <a routerLink="/commitment" class="menu-item" mat-flat-button>
+                         <mat-icon>timeline</mat-icon>
+                        Commitment
+                    </a>
+                </mat-list-item>
+            </mat-list>
+    
 
         </div>
     </mat-sidenav>
@@ -35,7 +45,7 @@
                 <app-select-repository></app-select-repository>
             </div>
             <button class="logout" (click)="onSubmit()" routerLink="/login">
-                Logout
+                <mat-icon class="exit">exit_to_app</mat-icon>
             </button>
         </mat-toolbar>
         <div class="main-content">

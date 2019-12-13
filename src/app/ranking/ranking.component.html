@@ -1,0 +1,27 @@
+<h3 class="title">Ranking</h3>
+<ul *ngFor="let item of data | paginate: { itemsPerPage: 10, currentPage: page }" (click)="onSelect(item)">
+    <div class="li-container">
+        <div class="rank">
+            <li><span class="bck-rank">{{item.rank}}</span></li>
+        </div>
+        <div>
+            <li>{{item.user.avatar}}</li>
+        </div>
+        <div class="name-position">
+            <li class="name">{{item.user.name}}</li>
+            <li class="position">{{item.user.position}}</li>
+        </div>
+        <div>
+            <li><i class="material-icons variation">arrow_drop_up</i></li>
+        </div>
+        <div>
+            <li class="like"><i class="material-icons">favorite_border</i></li>
+        </div>
+        <div>
+            <li class="dislike"><i class="material-icons">thumb_down_alt</i></li>
+        </div>
+    </div>
+</ul>
+<div class="pagination-container">
+    <pagination-controls class="pagination" (pageChange)="page = $event"></pagination-controls>
+</div>

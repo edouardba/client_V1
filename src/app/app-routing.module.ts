@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { PersistenceComponent } from './persistence/persistence.component';
 import { ThankYouPageComponent } from './thank-you-page/thank-you-page.component';
+import { CommitmentComponent } from './commitment/commitment.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
     component: NavComponent,
     children: [
       { path: 'dashboard-manager', component: DashboardManagerComponent }, 
-      { path: 'persistence-analyse', component: PersistenceComponent },
+      { path: 'persistence', component: PersistenceComponent },
+      { path: 'commitment', component: CommitmentComponent }
     ]
   }
 ];
