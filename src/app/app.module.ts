@@ -80,6 +80,8 @@ import { RankingComponent } from './ranking/ranking.component';
 import { CommitmentTableComponent } from './commitment-table/commitment-table.component';
 import { CommitmentChartComponent } from './commitment-chart/commitment-chart.component';
 import { CommitmentRankingComponent } from './commitment-ranking/commitment-ranking.component';
+import { CommitmentService } from './shared/services/commitment.service';
+import { ContextService } from './shared/services/context.service';
 
 @NgModule({
   declarations: [
@@ -169,7 +171,9 @@ import { CommitmentRankingComponent } from './commitment-ranking/commitment-rank
     AngularTokenModule,
     SelectRepositoriesService,
     SignupService,
-    PersistenceService
+    PersistenceService,
+    CommitmentService, 
+    ContextService
   ],
   bootstrap: [AppComponent],
   entryComponents: [DateSelectorDialogComponent]

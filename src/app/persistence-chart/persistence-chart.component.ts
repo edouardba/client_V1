@@ -14,7 +14,7 @@ export class PersistenceChartComponent implements OnInit, OnDestroy {
   };
 
   public lineChartLabels = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet' , 'Aout' , 'Septembre', 'Octobre', 'Novembre', 'Decembre'];
-  public lineChartType = 'bar';
+  public lineChartType = 'line';
   public lineChartLegend = true;
   public lineChartData;
   private currentUserDataSubcription: Subscription;

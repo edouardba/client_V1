@@ -1,1 +1,8 @@
-<p>commitment-chart works!</p>
+<div class="chart-container">
+    <canvas *ngIf="lineChartData" class="chart" baseChart
+        [datasets]="lineChartData" 
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions" 
+        [legend]="lineChartLegend" 
+        [chartType]="lineChartType"></canvas>
+</div>

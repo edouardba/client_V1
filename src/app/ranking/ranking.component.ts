@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ContextService } from '../shared/services/context.service';
 import { PersistenceService } from '../shared/services/persistence.service';
 
 @Component({
@@ -11,13 +12,15 @@ export class RankingComponent implements OnInit {
   constructor(private persistenceService: PersistenceService) { }
 
   @Input() data;
+  @Output() valueChange = new EventEmitter();
   page: number = 1;
 
   ngOnInit() {
   }
 
   onSelect(item){
-    this.persistenceService.changeSelectedUser(item.user)
+    this.valueChange.emit(item.user)
+    console.log('user in ranking component', item.user)
   }
 
 }

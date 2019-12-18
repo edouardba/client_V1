@@ -19,6 +19,6 @@
         </div>
     </div>
     <div class="ranking">
-        <app-commitment-ranking></app-commitment-ranking>
+        <app-commitment-ranking (valueChange)="getCurrentUserSelected($event)" [list]="rankingList"></app-commitment-ranking>
     </div>
 </div>

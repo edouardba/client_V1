@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 import { PersistenceService } from '../shared/services/persistence.service';
 import { Subscription } from 'rxjs';
+import { ContextService } from '../shared/services/context.service';
 
 @Component({
   selector: 'app-persistence',
@@ -25,7 +26,6 @@ export class PersistenceComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.getRankingList();
-    this.getCurrentUserSelected();
   }
 
   getRankingList() {
@@ -34,15 +34,12 @@ export class PersistenceComponent implements OnInit, OnDestroy {
     })
   }
 
-  getCurrentUserSelected() {
-    this.currentUserSelectedSubscription = this.persistenceService.currentUserSelected.subscribe(res => {
-      if (res) {
-        console.log('this.selectedUser', this.selectedUser)
-        this.selectedUser = res;
-        this.getUserDetails()
-        this.getChartData()
-      }
-    })
+  getCurrentUserSelected(user) {
+    if(user) {
+      this.selectedUser = user;
+      this.getUserDetails();
+      this.getChartData();
+    }
   }
 
   getUserDetails() {

@@ -17,6 +17,6 @@
         </div>
     </div>
     <div class="ranking">
-        <app-persistence-ranking [list]="rankingList"></app-persistence-ranking>
+        <app-persistence-ranking (valueChange)="getCurrentUserSelected($event)" [list]="rankingList"></app-persistence-ranking>
     </div>
 </div>
