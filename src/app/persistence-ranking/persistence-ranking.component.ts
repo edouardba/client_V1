@@ -17,7 +17,6 @@ export class PersistenceRankingComponent implements OnInit {
 
   getValue(user) {
     this.valueChange.emit(user)
-    console.log('user in persistence ranking component', user)
   }
 
 }

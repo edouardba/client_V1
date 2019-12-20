@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PersistenceTableComponent } from './persistence-table.component';
+import { PersistenceDetailsComponent } from './persistence-details.component';
 
-describe('PersistenceTableComponent', () => {
-  let component: PersistenceTableComponent;
-  let fixture: ComponentFixture<PersistenceTableComponent>;
+describe('PersistenceDetailsComponent', () => {
+  let component: PersistenceDetailsComponent;
+  let fixture: ComponentFixture<PersistenceDetailsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PersistenceTableComponent ]
+      declarations: [ PersistenceDetailsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PersistenceTableComponent);
+    fixture = TestBed.createComponent(PersistenceDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

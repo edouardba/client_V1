@@ -7,18 +7,17 @@
         </app-select-preset-period>
     </div>
 </div>
-
 <div class="container">
-    <div class="chart-table-container">
+    <div class="details">
+        <app-commitment-details [details]="details"></app-commitment-details>
+    </div>
+    <div class="chart-ranking-container">
         <div class="chart">
             <app-commitment-chart></app-commitment-chart>
         </div>
-        <div class="table">
-            <app-commitment-table>
-            </app-commitment-table>
+        <div class="ranking">
+            <app-commitment-ranking (valueChange)="getCurrentUserSelected($event)" [list]="rankingList">
+            </app-commitment-ranking>
         </div>
-    </div>
-    <div class="ranking">
-        <app-commitment-ranking (valueChange)="getCurrentUserSelected($event)" [list]="rankingList"></app-commitment-ranking>
     </div>
 </div>

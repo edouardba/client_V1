@@ -50,7 +50,6 @@ import { DashboardChartComponent } from './dashboard-chart/dashboard-chart.compo
 import { DashboardIndicatorComponent } from './dashboard-indicator/dashboard-indicator.component';
 import { DashboardRankingsComponent } from './dashboard-rankings/dashboard-rankings.component';
 import { DashboardRankingComponent } from './dashboard-ranking/dashboard-ranking.component';
-import { SelectProjectComponent } from './select-project/select-project.component';
 import { SelectDeveloperComponent } from './select-developer/select-developer.component';
 import { RankingSelectorComponent } from './ranking-selector/ranking-selector.component';
 import { RankingSelectorService } from './shared/services/ranking-selector.service';
@@ -70,18 +69,20 @@ import { AdminComponent } from './admin/admin.component';
 import { SignupService } from './shared/services/signup.service';
 import { PersistenceComponent } from './persistence/persistence.component';
 import { PersistenceRankingComponent } from './persistence-ranking/persistence-ranking.component';
-import { PersistenceTableComponent } from './persistence-table/persistence-table.component';
 import { PersistenceChartComponent } from './persistence-chart/persistence-chart.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { PersistenceService } from './shared/services/persistence.service';
 import { ThankYouPageComponent } from './thank-you-page/thank-you-page.component';
 import { CommitmentComponent } from './commitment/commitment.component';
 import { RankingComponent } from './ranking/ranking.component';
-import { CommitmentTableComponent } from './commitment-table/commitment-table.component';
 import { CommitmentChartComponent } from './commitment-chart/commitment-chart.component';
 import { CommitmentRankingComponent } from './commitment-ranking/commitment-ranking.component';
 import { CommitmentService } from './shared/services/commitment.service';
 import { ContextService } from './shared/services/context.service';
+import { LoginEmailComponent } from './login-email/login-email.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PersistenceDetailsComponent } from './persistence-details/persistence-details.component';
+import { CommitmentDetailsComponent } from './commitment-details/commitment-details.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +95,6 @@ import { ContextService } from './shared/services/context.service';
     DashboardIndicatorComponent,
     DashboardRankingsComponent,
     DashboardRankingComponent,
-    SelectProjectComponent,
     SelectDeveloperComponent,
     RankingSelectorComponent,
     SelectPresetPeriodComponent,
@@ -106,14 +106,15 @@ import { ContextService } from './shared/services/context.service';
     AdminComponent,
     PersistenceComponent,
     PersistenceRankingComponent,
-    PersistenceTableComponent,
     PersistenceChartComponent,
     ThankYouPageComponent,
     CommitmentComponent,
     RankingComponent,
-    CommitmentTableComponent,
     CommitmentChartComponent,
     CommitmentRankingComponent,
+    LoginEmailComponent,
+    PersistenceDetailsComponent,
+    CommitmentDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -160,6 +161,7 @@ import { ContextService } from './shared/services/context.service';
     SatDatepickerModule, 
     SatNativeDateModule,
     NgxPaginationModule,
+    FontAwesomeModule,
     AngularTokenModule.forRoot({
       apiBase: environment.baseUrl
     })
@@ -178,4 +180,4 @@ import { ContextService } from './shared/services/context.service';
   bootstrap: [AppComponent],
   entryComponents: [DateSelectorDialogComponent]
 })
-export class AppModule { }
+export class AppModule {}

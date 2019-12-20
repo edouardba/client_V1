@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CommitmentTableComponent } from './commitment-table.component';
+import { LoginEmailComponent } from './login-email.component';
 
-describe('CommitmentTableComponent', () => {
-  let component: CommitmentTableComponent;
-  let fixture: ComponentFixture<CommitmentTableComponent>;
+describe('LoginEmailComponent', () => {
+  let component: LoginEmailComponent;
+  let fixture: ComponentFixture<LoginEmailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CommitmentTableComponent ]
+      declarations: [ LoginEmailComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CommitmentTableComponent);
+    fixture = TestBed.createComponent(LoginEmailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 import { PersistenceService } from '../shared/services/persistence.service';
 import { Subscription } from 'rxjs';
-import { ContextService } from '../shared/services/context.service';
 
 @Component({
   selector: 'app-persistence',
@@ -16,12 +15,11 @@ export class PersistenceComponent implements OnInit, OnDestroy {
   public rankingList;
   public selectedUser;
   private rankingListSubscription: Subscription;
-  private currentUserSelectedSubscription: Subscription;
   private detailsByUserIdSubcription: Subscription;
   private chartByUserIdSubcription: Subscription;
 
 
-  public displayedColumns: string[] = ['commit_name', 'characters_number', 'score'];
+  public displayedColumns: string[] = ['commit_name', 'chars_count', 'score'];
   public dataSource = new MatTableDataSource();
 
   ngOnInit() {
@@ -63,9 +61,6 @@ export class PersistenceComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     if(this.rankingListSubscription) {
       this.rankingListSubscription.unsubscribe();
-    }
-    if(this.currentUserSelectedSubscription) {
-      this.currentUserSelectedSubscription.unsubscribe();
     }
     if(this.detailsByUserIdSubcription) {
       this.detailsByUserIdSubcription.unsubscribe()

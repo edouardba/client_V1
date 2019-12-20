@@ -20,7 +20,6 @@ export class RankingComponent implements OnInit {
 
   onSelect(item){
     this.valueChange.emit(item.user)
-    console.log('user in ranking component', item.user)
   }
 
 }

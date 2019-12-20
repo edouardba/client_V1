@@ -39,9 +39,6 @@
     <mat-sidenav-content class="content" [ngStyle]="{ 'margin-left.px': contentMargin }">
         <mat-toolbar *ngIf="show" id="mainToolbar">
             <div>
-                <app-select-project></app-select-project>
-            </div>
-            <div>
                 <app-select-repository></app-select-repository>
             </div>
             <button class="logout" (click)="onSubmit()" routerLink="/login">

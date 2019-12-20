@@ -16,13 +16,13 @@
 }
 
 .img {
-    padding: 20% 20% 20% 19%;
+    padding: 15% 20% 20% 19%;
     width: 60%;
     height: 60%;
 }
 
 .form-container {
-    margin-top: 15%;
+    margin-top: 12%;
     background-color: white;
     width: 100%;
     text-align: center;
@@ -33,28 +33,23 @@
     width: 50%;
 }
 
-.login {
+.login-button {
     margin-top: 25px;
     width: 50%;
     cursor: pointer;
     font-size: 15px;
-    color: white;
-    font-size: 1em;
-    font-weight: 400;
-    border: 5px solid transparent;
-}
-
-
-.email {
     background-color: #5b4ff6;
+    color: white;
 }
 
-.gitHub {
-    background-color: #151413;
-}
-
-.icon-git {
-    padding-right: 10px;
+.back-login {
+    /* text-decoration: none; */
+    font-weight: 400;
+    color: black;
+    font-size: 16px;
+    position: absolute;
+    left: 2%;
+    top: 3%;
 }
 
 .password-container {

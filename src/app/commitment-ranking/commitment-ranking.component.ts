@@ -17,7 +17,6 @@ export class CommitmentRankingComponent implements OnInit {
 
   getValue(user) {
     this.valueChange.emit(user)
-    console.log('user in commit ranking compo', user)
   }
 
 }

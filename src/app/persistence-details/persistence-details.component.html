@@ -2,13 +2,13 @@
     <table mat-table [dataSource]="dataSource" [class.isMobile]="isMobile" matSort>
 
         <ng-container matColumnDef="commit_name">
-            <th mat-header-cell  *matHeaderCellDef mat-sort-header> Commit Name </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Commit Name </th>
             <td mat-cell *matCellDef="let element">{{element.commit_name}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="characters_number">
+        <ng-container matColumnDef="chars_count">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Characters number </th>
-            <td mat-cell *matCellDef="let element"> {{element.characters_number}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.chars_count}} </td>
         </ng-container>
 
         <ng-container matColumnDef="score">

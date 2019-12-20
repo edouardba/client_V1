@@ -13,7 +13,10 @@ export class CommitmentComponent implements OnInit, OnDestroy {
 
   public rankingList;
   public selectedUser;
+  public details;
   private rankingListSubscription: Subscription;
+  private detailsByUserIdSubcription: Subscription;
+  private chartByUserIdSubcription: Subscription;
 
   ngOnInit() {
     this.getRankingList();
@@ -34,13 +37,13 @@ export class CommitmentComponent implements OnInit, OnDestroy {
   }
 
   getUserDetails() {
-    this.commitmentService.getDetailsByUserId(this.selectedUser.id).subscribe(res => {
-      console.log(res.details);
+    this.detailsByUserIdSubcription = this.commitmentService.getDetailsByUserId(this.selectedUser.id).subscribe(res => {
+      this.details = res.details;
     })
   }
 
   getChartData() {
-    this.commitmentService.getChartDataByUserId(this.selectedUser.id).subscribe(res => {
+    this.chartByUserIdSubcription = this.commitmentService.getChartDataByUserId(this.selectedUser.id).subscribe(res => {
       if(res) {
         this.commitmentService.changeChartUserData(res.datasets);
       }
@@ -54,6 +57,12 @@ export class CommitmentComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     if(this.rankingListSubscription) {
       this.rankingListSubscription.unsubscribe();
+    }
+    if(this.detailsByUserIdSubcription) {
+      this.detailsByUserIdSubcription.unsubscribe();
+    }
+    if(this.chartByUserIdSubcription) {
+      this.chartByUserIdSubcription.unsubscribe();
     }
   }
 

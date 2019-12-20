@@ -1,0 +1,13 @@
+<div class="container">
+    <mat-card class="card" *ngFor="let detail of details">
+        <mat-card-content>
+            <ul class="list">
+                <div class="value-container">
+                    <li class="value">{{detail.metric_value}}</li>
+                    <li class="variation">{{detail.variation | percent}}</li>
+                </div>
+                <li class="name">{{detail.metric_name}}</li>
+            </ul>
+        </mat-card-content>
+    </mat-card>
+</div>
