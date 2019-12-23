@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-persistence-ranking',
-  templateUrl: './persistence-ranking.component.html',
-  styleUrls: ['./persistence-ranking.component.css']
+  selector: 'app-commitment-ranking',
+  templateUrl: './commitment-ranking.component.html',
+  styleUrls: ['./commitment-ranking.component.css']
 })
-export class PersistenceRankingComponent implements OnInit {
+export class CommitmentRankingComponent implements OnInit {
 
   constructor() { }
 

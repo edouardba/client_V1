@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    margin-bottom: 20px;
+    width: 28%;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.value-container {
+    display: flex;
+}
+
+.value {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.variation {
+    font-size: 13px;
+    margin-top: 14px;
+    margin-left: 5px;
+}

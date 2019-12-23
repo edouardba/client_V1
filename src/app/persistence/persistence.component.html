@@ -1,5 +1,5 @@
 <div class="header">
-    <div class="title">
+    <div>
         <h2>Persistence</h2>
     </div>
     <div class="period">
@@ -10,13 +10,13 @@
 <div class="container">
     <div class="chart-table-container">
         <div class="chart">
-            <app-persistence-chart></app-persistence-chart>
+            <app-persistence-chart [chartData]="chartData"></app-persistence-chart>
         </div>
         <div class="table">
-            <app-persistence-table [dataSource]="dataSource" [displayedColumns]="displayedColumns"></app-persistence-table>
+            <app-persistence-details [dataSource]="dataSource" [displayedColumns]="displayedColumns"></app-persistence-details>
         </div>
     </div>
     <div class="ranking">
-        <app-persistence-ranking [list]="rankingList"></app-persistence-ranking>
+        <app-persistence-ranking (valueChange)="onChangeUser($event)" [list]="rankingList"></app-persistence-ranking>
     </div>
 </div>

@@ -1,0 +1,27 @@
+.container {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.details {
+    width: 100%;
+}
+
+.chart-ranking-container {
+    width: 100%;
+    display: flex;
+}
+
+.chart {
+    width: 65%;
+    margin-right: 20px;
+}
+
+.ranking {
+    width: 35%;
+}

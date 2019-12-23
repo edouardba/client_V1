@@ -1,23 +1,23 @@
 {
     "ranking": [
         {
+            "rank": 1,
             "user": 
                 {    
                     "id": 1,
-                    "avatar": "avatar",
-                    "name": "Christopher",
+                    "first_name":"Christopher", 
+                    "last_name":"Bograt", 
                     "position": "Back-end developer"
                 },
-            "rank": 1,
-            "rank_variation": 2
+            "score":86753
         }
     ],
     "details": [
         {
+            "commit_id": "0235b838bb8667885a85dec53253494a88a337dd",
             "commit_name": "Resolve conflict",
-            "characters_number": 34687,
-            "score": 82,
-            "variation": -0.7
+            "chars_count": 34687,
+            "score": 82
         }
     ],
     "datasets": [

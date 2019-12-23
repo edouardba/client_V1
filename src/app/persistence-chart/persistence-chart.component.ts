@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { PersistenceService } from '../shared/services/persistence.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-persistence-chart',
@@ -8,29 +9,18 @@ import { PersistenceService } from '../shared/services/persistence.service';
 })
 export class PersistenceChartComponent implements OnInit {
 
+  @Input() public chartData;
+
   public lineChartOptions = {
     responsive: true,
   };
 
-  public lineChartLabels = ['2001', '2002', '2003', '2004', '2005'];
+  public lineChartLabels = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet' , 'Aout' , 'Septembre', 'Octobre', 'Novembre', 'Decembre'];
   public lineChartType = 'line';
   public lineChartLegend = true;
-  public lineChartData;
 
-  constructor(private persistenceService: PersistenceService) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.persistenceService.currentchartUserData.subscribe(res => {
-      if(res) {
-        this.lineChartData = []
-        for(let i = 0; i < res.length; i++) {
-          this.lineChartData.push(res[i])
-        }
-        console.log(this.lineChartData)
-      }
-
-    })
-  }
-
+  ngOnInit() {}
 
 }

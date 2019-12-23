@@ -1,0 +1,59 @@
+{
+    "ranking": [
+        {
+            "rank": 1,
+            "user": 
+                {    
+                    "id": 1,
+                    "first_name":"Quentin", 
+                    "last_name":"Guenot", 
+                    "position": "Back-end developer"
+                },
+            "score":86753
+        }
+    ],
+    "details": [
+        {
+            "id": 1,
+            "metric_name": "Initial commit",
+            "metric_value": 15,
+            "variation": 0.10
+        },
+        {
+            "id": 2,
+            "metric_name": "Commit merged",
+            "metric_value": 3,
+            "variation": -0.12
+        },
+        {
+            "id": 3,
+            "metric_name": "Number of Pull Requests",
+            "metric_value": 8,
+            "variation": 0.05
+        },
+        {
+            "id": 4,
+            "metric_name": "Number of reviews",
+            "metric_value": 4,
+            "variation": 0.15
+        },
+        {
+            "id": 5,
+            "metric_name": "Number of comments",
+            "metric_value": 18,
+            "variation": 0.17
+        },
+        {
+            "id": 6,
+            "metric_name": "Average time to resolve PRs",
+            "metric_value": 2.5,
+            "variation": -0.05
+        }
+    ],
+    "datasets": [
+        {
+            "data": [1.9, 3, 4.4, 2.2, 3.9, 3.9, 3.5, 3.8, 4.1, 2.8, 3.2, 3.9],
+            "label": "Characters Number"
+        }
+    ]
+}
