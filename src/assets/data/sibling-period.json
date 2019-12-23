@@ -1,0 +1,11 @@
+{
+"biweekly": "Last 14 days",
+"daily": "Yesterday",
+"last_month": "Last Month",
+"last_week": "Last Week",
+"monthly": "Last 30 days",
+"this_month": "This Month",
+"this_week": "This Week",
+"weekly": "Last 7 days",
+"year_to_date": "This year"
+}

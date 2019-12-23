@@ -1,0 +1,41 @@
+.container mat-card {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.list-item {
+    list-style: none;
+    padding-left: 0;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 2px 1px -1px #d4d1fb, 
+                0 1px 1px 0 #d4d1fb, 
+                0 1px 3px 0 #d4d1fb;
+}
+
+mat-card {
+    padding: 24px;
+}
+
+.scoring {
+    display: flex;
+}
+
+.value {
+    font-size: 28px;
+    font-weight: medium;
+}
+
+.percentage {
+    font-size: 13px;
+    margin-top: 14px;
+    margin-left: 5px;
+}
+
+.icon {
+    position: absolute;
+    right: 15px;
+    top: 40px;
+}
+

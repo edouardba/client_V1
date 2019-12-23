@@ -1,0 +1,22 @@
+/************************** DATE SELECT ******************************/
+
+.date-select {
+    display: flex;
+    margin-right: 20px;
+}
+  
+.date-select p {
+    margin-right: 12px;
+    margin-top: 25px;
+    font-size: 14px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #4951d2;
+    line-height: 25px;
+}
+  
+  
+.calendar {
+    color: #4951d2;
+    margin-top: 25px;
+    cursor: pointer;
+}

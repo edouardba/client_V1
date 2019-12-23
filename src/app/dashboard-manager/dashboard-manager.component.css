@@ -1,0 +1,46 @@
+/*************** HEADER **************/
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.selectors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.select-user {
+    margin-right: 15px;
+}
+
+.select-date {
+    margin-top: -7px;
+}
+
+/*************** INDICATORS ***************/
+
+.indicators-container {
+    width: 100%;
+}
+
+.indicators {
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/************* RANKING ******************/
+
+.rankings-container {
+    width: 100%;
+}
+
+.rankings {
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}

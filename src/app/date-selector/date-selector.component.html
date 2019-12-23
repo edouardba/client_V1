@@ -1,0 +1,6 @@
+<div class="date-select">
+    <p *ngIf="dateStart">{{dateStart}} <span *ngIf="dateEnd"><span>-</span> {{dateEnd}}</span></p>
+    <span class="calendar">
+        <i (click)="openDialog()" class="material-icons">date_range</i>
+    </span>
+</div>

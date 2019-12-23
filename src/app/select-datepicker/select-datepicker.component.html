@@ -1,0 +1,9 @@
+<div [formGroup]="myGroup">
+    <mat-form-field [style.width.px]="150">
+        <input matInput placeholder="Choisir une période" [satDatepicker]="picker" formControlName="date"
+            (dateChange)="onSelect($event)">
+        <sat-datepicker #picker [rangeMode]="true" [closeAfterSelection]="true">
+        </sat-datepicker>
+        <sat-datepicker-toggle matSuffix [for]="picker"></sat-datepicker-toggle>
+    </mat-form-field>
+</div>

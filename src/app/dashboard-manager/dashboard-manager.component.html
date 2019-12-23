@@ -1,0 +1,21 @@
+<div class="header-container">
+    <div>
+        <h2>Dashboard</h2>
+    </div>
+    <div class="selectors">
+        <app-select-developer class="select-user"></app-select-developer>
+        <app-date-selector class="select-date" (dateSelected)="getDateSelected($event)"></app-date-selector>
+    </div>
+</div>
+
+<div class="indicators-container">
+    <app-dashboard-indicators class="indicators"></app-dashboard-indicators>
+</div>
+
+<div>
+    <app-dashboard-chart></app-dashboard-chart>
+</div>
+
+<div class="rankings-container">
+    <app-dashboard-rankings class="rankings"></app-dashboard-rankings>
+</div>

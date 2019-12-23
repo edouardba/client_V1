@@ -1,0 +1,12 @@
+<div>
+    <app-select-preset-period (periodPreset)="getPresetDate($event)" [periodSelected]="period">
+    </app-select-preset-period>
+</div>
+<div>
+    <app-select-datepicker (valueRange)="getRangeValue($event)" [rangeSelected]="range" *ngIf="showDatepicker"></app-select-datepicker>
+</div>
+<div>
+    <button class="cancel" mat-stroked-button mat-button mat-dialog-close>Annuler</button>
+    <button class="validate" mat-stroked-button [disabled]="period === 'custom' && range === undefined"
+        (click)="onValidate()">Valider</button>
+</div>

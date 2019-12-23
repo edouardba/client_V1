@@ -1,0 +1,42 @@
+<mat-sidenav-container id="sidenavContainer" fullscreen>
+    <mat-sidenav mode="side" #sidenav id="sidenav" [class.menu-open]="isMenuOpen" [class.menu-close]="!isMenuOpen"
+        opened>
+        <div class="items">
+            <div class="toolbarMenu-container">
+                <mat-icon (click)="onToolbarMenuToggle()" id="toolbarMenu">subject</mat-icon>
+            </div>
+
+            <mat-list id="menus">
+                <mat-list-item>
+                    <a routerLink="/dashboard-manager" class="menu-item" mat-flat-button>
+                        <mat-icon>dashboard</mat-icon>
+                        Dashboard
+                    </a>
+                </mat-list-item>
+            </mat-list>
+
+            <mat-list id="menus">
+                <mat-list-item>
+                    <a routerLink="/performance-ranking" class="menu-item" mat-flat-button>
+                        <mat-icon>assessment</mat-icon>
+                        Performance ranking
+                    </a>
+                </mat-list-item>
+            </mat-list>
+
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content class="content" [ngStyle]="{ 'margin-left.px': contentMargin }">
+        <mat-toolbar *ngIf="show" id="mainToolbar">
+            <div>
+                <app-select-project></app-select-project>
+            </div>
+            <div>
+                <app-select-repository></app-select-repository>
+            </div>
+        </mat-toolbar>
+        <div class="main-content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

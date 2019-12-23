@@ -1,0 +1,15 @@
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+            <h3>{{data.title}}</h3>
+            <div class="displayTopFlop">
+                <a class="top" (click)="toggleTopRanking()">Top</a>
+                <span>|</span>
+                <a class="flop" (click)="toggleFlopRanking()">Flop</a>
+            </div>
+        </mat-card-header>
+        <mat-card-content *ngIf="showRankingTop || showRankingFlop">
+            <app-ranking-selector></app-ranking-selector>
+        </mat-card-content>
+    </mat-card>
+</div>
