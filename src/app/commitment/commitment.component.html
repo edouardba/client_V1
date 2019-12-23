@@ -13,10 +13,10 @@
     </div>
     <div class="chart-ranking-container">
         <div class="chart">
-            <app-commitment-chart></app-commitment-chart>
+            <app-commitment-chart [chartData]="chartData"></app-commitment-chart>
         </div>
         <div class="ranking">
-            <app-commitment-ranking (valueChange)="getCurrentUserSelected($event)" [list]="rankingList">
+            <app-commitment-ranking (valueChange)="onChangeUser($event)" [list]="ranking">
             </app-commitment-ranking>
         </div>
     </div>

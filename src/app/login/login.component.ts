@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faSquare, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { LoginGithubService } from '../shared/services/login.github.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { faSquare, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private loginGithubService: LoginGithubService) { }
 
   faGithub = faGithub;
   faSquare = faSquare;
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
   }
 
   onClick() {
-    // call service for GitHub login
+    this.loginGithubService.login();
   }
 
 

@@ -9,13 +9,6 @@ export class CommitmentService {
 
     private _url = 'assets/data/commitment.json';
 
-    private chartUserData = new BehaviorSubject<any>(null)
-    currentchartUserData = this.chartUserData.asObservable()
-
-    changeChartUserData(data) {
-        this.chartUserData.next(data)
-    }
-
     getRankingList(): Observable<any> {
         return this._http.get<any>(this._url);
     }

@@ -11,28 +11,39 @@ export class CommitmentComponent implements OnInit, OnDestroy {
 
   constructor(private commitmentService: CommitmentService) { }
 
-  public rankingList;
+  public ranking;
   public selectedUser;
   public details;
+  public chartData;
+
   private rankingListSubscription: Subscription;
   private detailsByUserIdSubcription: Subscription;
   private chartByUserIdSubcription: Subscription;
 
   ngOnInit() {
     this.getRankingList();
+    // getCommitmentServiceReport 
+    // 1 get id
+    // 2 get report
+    // 3 mettre a jour le ranking
   }
 
   getRankingList() {
     this.rankingListSubscription = this.commitmentService.getRankingList().subscribe(res => {
-      this.rankingList = res.ranking
+      this.ranking = res.ranking;
+      if(this.ranking) {
+        this.selectedUser = res.ranking[0];
+      }
     })
   }
 
-  getCurrentUserSelected(user) {
+
+
+  onChangeUser(user) {
     if(user) {
       this.selectedUser = user;
       this.getUserDetails();
-      this.getChartData()
+      this.getChartData();
     }
   }
 
@@ -44,9 +55,7 @@ export class CommitmentComponent implements OnInit, OnDestroy {
 
   getChartData() {
     this.chartByUserIdSubcription = this.commitmentService.getChartDataByUserId(this.selectedUser.id).subscribe(res => {
-      if(res) {
-        this.commitmentService.changeChartUserData(res.datasets);
-      }
+      this.chartData = res.datasets;
     })
   }
 

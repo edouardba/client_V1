@@ -9,12 +9,11 @@ export class PersistenceService {
 
     private _url = 'assets/data/persistence.json';
 
-    private chartUserData = new BehaviorSubject<any>(null)
-    currentchartUserData = this.chartUserData.asObservable()
-
-    changeChartUserData(data) {
-        this.chartUserData.next(data)
+    getReport(persistence_id, repository_id): Observable<any> {
+        return this._http.get<any>(this._url);
     }
+
+
 
     getRankingList(): Observable<any> {
         return this._http.get<any>(this._url);

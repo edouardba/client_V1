@@ -7,7 +7,9 @@ import { Subscription } from 'rxjs';
   templateUrl: './persistence-chart.component.html',
   styleUrls: ['./persistence-chart.component.css']
 })
-export class PersistenceChartComponent implements OnInit, OnDestroy {
+export class PersistenceChartComponent implements OnInit {
+
+  @Input() public chartData;
 
   public lineChartOptions = {
     responsive: true,
@@ -16,24 +18,9 @@ export class PersistenceChartComponent implements OnInit, OnDestroy {
   public lineChartLabels = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet' , 'Aout' , 'Septembre', 'Octobre', 'Novembre', 'Decembre'];
   public lineChartType = 'line';
   public lineChartLegend = true;
-  public lineChartData;
-  private currentUserDataSubcription: Subscription;
 
-  constructor(private persistenceService: PersistenceService) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.currentUserDataSubcription = this.persistenceService.currentchartUserData.subscribe(res => {
-      if(res) {
-        this.lineChartData = []
-        for(let i = 0; i < res.length; i++) {
-          this.lineChartData.push(res[i])
-        }
-      }
+  ngOnInit() {}
 
-    })
-  }
-
-  ngOnDestroy() {
-    this.currentUserDataSubcription.unsubscribe();
-  }
 }

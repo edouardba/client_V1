@@ -83,6 +83,7 @@ import { LoginEmailComponent } from './login-email/login-email.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PersistenceDetailsComponent } from './persistence-details/persistence-details.component';
 import { CommitmentDetailsComponent } from './commitment-details/commitment-details.component';
+import { LoginGithubService } from './shared/services/login.github.service';
 
 @NgModule({
   declarations: [
@@ -175,7 +176,8 @@ import { CommitmentDetailsComponent } from './commitment-details/commitment-deta
     SignupService,
     PersistenceService,
     CommitmentService, 
-    ContextService
+    ContextService,
+    LoginGithubService
   ],
   bootstrap: [AppComponent],
   entryComponents: [DateSelectorDialogComponent]
