@@ -17,10 +17,8 @@ export class SelectPresetPeriodComponent implements OnInit {
   @Input() periodSelected;
 
   ngOnInit() {
-    console.log('tets')
     this.siblingPeriodService.getSiblingPeriod().subscribe(res => {
       this.periodList = res;
-      console.log(' this.period', this.periodList)
     })
   }
 

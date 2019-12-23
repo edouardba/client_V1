@@ -1,0 +1,115 @@
+<div class="container">
+    <div class="illustration-container">
+        <div class="helper">
+            <div class="helper-content">
+                <div>
+                    <h3>Private Beta plan 100% free</h3>
+                    <p>Start getting visibility and snapshots into your software development process.
+                    </p>
+                </div>
+                <div>
+                    <h3>Your data is safe with us</h3>
+                    <p>Our system executes code analysis of source code files, it is performed on ephemeral instances
+                        and source code content is immediately purged after processing. We only persist file names and
+                        metrics to our database.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-container">
+        <mat-toolbar>
+            <div class="sign-in-container">
+                <p class="signin-route">Already have an account? <a routerLink="/login"> Sign in</a></p>
+            </div>
+        </mat-toolbar>
+        <div class="form-container">
+            <h3 class="title">Start to build a culture of continuous improvement with concrete insights.</h3>
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                <mat-form-field class="firstname" appearance="outline">
+                    <mat-label>First name</mat-label>
+                    <input matInput type="firstname" formControlName="firstname" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" />
+                    <div *ngIf="submitted && f.firstname.errors" class="invalid-feedback">
+                        <div *ngIf="f.firstname.errors.required">Firstname is required</div>
+                    </div>
+                </mat-form-field>
+                
+                <mat-form-field class="name" appearance="outline">
+                    <mat-label>Last name</mat-label>
+                    <input matInput type="name" formControlName="name" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required">Name is required</div>
+                    </div>
+                </mat-form-field>
+
+                <mat-form-field class="email" appearance="outline">
+                    <mat-label>Email adress</mat-label>
+                    <input matInput type="email" formControlName="email" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                    </div>
+                </mat-form-field><br />
+
+                <mat-form-field class="organization" appearance="outline">
+                    <mat-label>Organization name</mat-label>
+                    <input matInput type="organization" formControlName="organization" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.organization.errors }" />
+                    <div *ngIf="submitted && f.organization.errors" class="invalid-feedback">
+                        <div *ngIf="f.organization.errors.required">Organization name is required</div>
+                    </div>
+                </mat-form-field><br />
+
+                <mat-form-field class="engineer-number" appearance="outline">
+                    <mat-label># of engineers in your company?</mat-label>
+                    <mat-select formControlName="engineer" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.engineer.errors }">
+                        <mat-option *ngFor="let select of selectEngineerNumber" [value]="select.value">
+                            {{select.value}}
+                        </mat-option>
+                    </mat-select>
+                    <div *ngIf="submitted && f.engineer.errors" class="invalid-feedback">
+                        <div *ngIf="f.engineer.errors.required"># of Engineers is required</div>
+                    </div>
+                </mat-form-field><br />
+
+                <mat-form-field class="hosting" appearance="outline">
+                    <mat-label>Where do you host your Git repos?</mat-label>
+                    <mat-select formControlName="hosting" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.hosting.errors }">
+                        <mat-option *ngFor="let select of selectHostingRepo" [value]="select.value">
+                            {{select.value}}
+                        </mat-option>
+                    </mat-select>
+                    <div *ngIf="submitted && f.hosting.errors" class="invalid-feedback">
+                        <div *ngIf="f.hosting.errors.required">SCM is required</div>
+                    </div>
+                </mat-form-field><br />
+
+                <mat-form-field class="role" appearance="outline">
+                    <mat-label>What is your role?</mat-label>
+                    <mat-select formControlName="role" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.role.errors }">
+                        <mat-option *ngFor="let select of selectRole" [value]="select.value">
+                            {{select.value}}
+                        </mat-option>
+                    </mat-select>
+                    <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
+                        <div *ngIf="f.role.errors.required">Your role is required</div>
+                    </div>
+                </mat-form-field><br />
+
+                <div>
+                    <button [disabled]="loading" class="signup-button" mat-raised-button><span>Request A
+                            Demo</span></button>
+                </div>
+            </form>
+            <div class="legal">
+                <p>Signing up signifies that you have read and agree to the <a>Terms of Service</a> and our <a>Privacy
+                        policy</a> .</p>
+            </div>
+        </div>
+    </div>
+</div>

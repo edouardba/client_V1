@@ -17,9 +17,9 @@
 
             <mat-list id="menus">
                 <mat-list-item>
-                    <a routerLink="/performance-ranking" class="menu-item" mat-flat-button>
-                        <mat-icon>assessment</mat-icon>
-                        Performance ranking
+                    <a routerLink="/persistence-analyse" class="menu-item" mat-flat-button>
+                        <mat-icon>compare_arrows</mat-icon>
+                        Persistence
                     </a>
                 </mat-list-item>
             </mat-list>
@@ -34,6 +34,9 @@
             <div>
                 <app-select-repository></app-select-repository>
             </div>
+            <button class="logout" (click)="onSubmit()" routerLink="/login">
+                Logout
+            </button>
         </mat-toolbar>
         <div class="main-content">
             <router-outlet></router-outlet>

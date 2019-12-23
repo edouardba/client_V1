@@ -10,7 +10,7 @@ import * as Chart from 'chart.js';
 export class DashboardChartComponent implements OnInit {
 
   public lineChartOptions = {
-    responsive: true
+    responsive: true,
   };
 
   public lineChartLabels = ['2001', '2002', '2003', '2004', '2005'];

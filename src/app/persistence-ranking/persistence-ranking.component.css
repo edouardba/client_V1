@@ -1,0 +1,94 @@
+.container {
+    background-color: white;
+    box-shadow: 0 2px 1px -1px #d4d1fb, 
+    0 1px 1px 0 #d4d1fb, 
+    0 1px 3px 0 #d4d1fb;
+    padding-bottom: 5px;
+}
+
+.title {
+    padding: 20px 20px 5px 20px;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+ul {
+    margin: 0 0 5px 0;
+    list-style: none;
+    padding: 5%;
+}
+
+li {
+    cursor: pointer;
+}
+
+.li-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bck-rank {
+    background-color: #CDCFFF;
+    padding: 3px 5px 3px 5px;
+    border-radius: 3px;
+    color: #333DF4;
+}
+
+.name {
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.position {
+    font-size: 12px;
+    color: #4A4A4A;
+    font-weight: 400;
+}
+
+.variation {
+    font-size: 30px;
+}
+
+/************* INTERACTION *************/
+
+.like {
+    cursor: pointer;;
+    padding-left: 45%;
+    color: #4A4A4A
+}
+
+.dislike {
+    cursor: pointer;;
+    color: #4A4A4A
+}
+
+.like:hover {
+    color: red;
+}
+
+.dislike:hover {
+    color: blue;
+}
+
+/********** PAGINATION ***********/
+
+.pagination {
+    font-size: smaller;
+}
+
+.pagination-container {
+    margin-left: 33%;
+}
+
+/************ RESPONSIVE ************/
+
+@media screen and (min-width: 200px) and (max-width: 1100px) {
+    .li-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}

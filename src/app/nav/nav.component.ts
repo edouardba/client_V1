@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AngularTokenService } from 'angular-token';
 
 @Component({
   selector: 'app-nav',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, 
+              private tokenService: AngularTokenService) { }
 
   ngOnInit() {
   }
@@ -24,6 +27,18 @@ export class NavComponent implements OnInit {
     } else {
       this.contentMargin = 240;
     }
+  }
+
+  onSubmit() {
+    this.tokenService.signOut().subscribe(
+      result => {
+        console.log(result)
+        this.router.navigate( ['login']);
+      }, 
+      error => {
+        console.log(error)
+      }
+    )
   }
 
 }

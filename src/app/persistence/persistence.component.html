@@ -1,0 +1,22 @@
+<div class="header">
+    <div class="title">
+        <h2>Persistence</h2>
+    </div>
+    <div class="period">
+        <app-select-preset-period class="period-select" (periodPreset)="getPresetDate($event)"></app-select-preset-period>
+    </div>
+</div>
+
+<div class="container">
+    <div class="chart-table-container">
+        <div class="chart">
+            <app-persistence-chart></app-persistence-chart>
+        </div>
+        <div class="table">
+            <app-persistence-table [dataSource]="dataSource" [displayedColumns]="displayedColumns"></app-persistence-table>
+        </div>
+    </div>
+    <div class="ranking">
+        <app-persistence-ranking [list]="rankingList"></app-persistence-ranking>
+    </div>
+</div>

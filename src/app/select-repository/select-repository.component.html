@@ -1,8 +1,8 @@
 <mat-form-field class="container" appearance="outline">
     <mat-label>Select repository</mat-label>
     <mat-select [(ngModel)]="repositorySelected" (ngModelChange)="onRepositorySelect($event)">
-        <mat-option *ngFor="let repository of repositoryList" [value]="repository.id">
-            {{repository.name}}
+        <mat-option *ngFor="let repository of repositoryList" [value]="repository.url">
+            {{repository.url}}
         </mat-option>
     </mat-select>
 </mat-form-field>
